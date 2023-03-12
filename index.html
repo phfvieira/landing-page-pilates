@@ -14,20 +14,24 @@
   <title>Landing Page</title>
 </head>
 
-<body class="main-bg">
+<body>
+  <input id="close-menu" class="close-menu" type="checkbox" aria-label="Close menu" role="button">
+  <label class="close-menu-label" for="close-menu" title="close menu"></label>
+
   <aside class="menu white-bg">
     <div class="main-content menu-content">
-      <h1>
+      <h1 onclick="getElementById('close-menu').checked = false;">
         <a href="#home"> LOGO</a>
       </h1>
       <nav>
 
-        <ul>
+        <ul onclick="getElementById('close-menu').checked = false;">
 
-          <li><a href="#intro">intro</a></li>
-          <li><a href="#grid-one">grid-one</a></li>
-          <li><a href="#gallery">gallery</a></li>
-          <li><a href="">contact</a></li>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#grid-one">Objetivos</a></li>
+          <li><a href="#gallery">Galeria</a></li>
+          <li><a href="#pricing">Aulas</a></li>
+          <li><a href="#contact">Contato</a></li>
         </ul>
       </nav>
     </div>
@@ -123,8 +127,109 @@
       </div>
     </div>
   </section>
+  <section id="pricing" class="white-bg section">
+    <div class="main-content top3-content">
+      <h2>Aulas de Pilates e Sessões de terapia</h2>
+      <p>Temos ótimas aulas desde iniciantes até pessoas que já praticam o Pilates,
+        aulas tanto para pessoas que possuem algum problema, quanto para pessoas que
+        querem melhorar seu físico e sua flexibilidade.
+      </p>
+      <p>Temos também sessões de Ventosaterapia e Auriculoterapia que podem melhorar
+        dores no corpo que causam desconfortos e também relaxar grupos musculares</p>
+
+      <div class="responsive-table">
+        <table>
+          <caption>tabela de preços aulas de pilates semanais e sessões de terapia</caption>
+
+          <thead>
+            <tr>
+              <th>1 Aula</th>
+              <th>2 Aulas</th>
+              <th>3 Aulas</th>
+              <th>Ventosaterapia</th>
+              <th>Auriculoterapia</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>150,00 R$</td>
+              <td>250,00 R$</td>
+              <td>330,00 R$</td>
+              <td>120,00 R$</td>
+              <td>100, 00 R$</td>
+            </tr>
+
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td>Aulas</td>
+              <td>Pilates</td>
+              <td>Semanais</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="intro main-bg section">
+    <div class="main-content intro-content">
+      <div class="intro-text-content">
+        <h2>Duvidas</h2>
+        <p>Qualquer duvida envie sua mensagem que iremos esclarecê-las, Obrigado por visualizar a nossa página!</p>
+      </div>
+      <div class="intro-img">
+        <img src="assets/img/pilates.svg" alt="Logo de HTML, CSS e JS.">
+      </div>
+      <div class="contact-form">
+        <fieldset class="form-grid">
+          <legend>Fale Comigo</legend>
+
+          <div class="form-group">
+            <label for="first-name">Primeiro Nome</label>
+            <input type="text" name="first-name" id="first-name" placeholder="Primeiro Nome">
+          </div>
+
+          <div class="form-group">
+            <label for="last-name">Sobrenome</label>
+            <input type="text" name="last-name" id="last-name" placeholder="Seu Sobrenome">
+          </div>
+
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="seu e-mail">
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="seu e-mail">
+
+            <div class="form-group full-width">
+              <label for="message">Mensagem</label>
+              <textarea name="message" id="message" cols="30" rows="10" placeholder="Sua Mensagem"></textarea>
+            </div>
 
 
+            <div class="form-group full-width">
+              <button type="submit">Envie Mensagem</button>
+            </div>
+        </fieldset>
+      </div>
+    </div>
+  </section>
+
+
+  <footer id="footer" class="footer white-bg">
+    <div>
+      <p>Pablo Henrique Fernandes</p>
+      <p><a href="https://github.com/phfvieira/landing-page-pilates">Github</a></p>
+      <p><a href="https://www.linkedin.com/in/pablo-henrique-fernandes-vieira-11a981231/">Linkedin</a></p>
+    </div>
+  </footer>
+  <a class="back-to-top" href="#">➤</a>
 </body>
 
 </html>
